@@ -1,0 +1,159 @@
+:root {
+  /* 🎨 1. Paleta de Cores Premium (Deep Sanctuary) */
+  /* Primary: Deep Midnight Blue - Autoridade e Profundidade */
+  --color-primary: #0f172a;
+  /* Slate 900+ */
+  --color-primary-light: #1e293b;
+  /* Slate 800 */
+  --color-primary-dark: #020617;
+  /* Slate 950 */
+
+  /* Secondary: Ethereal Gold - Elegância sem ser "amarelo" */
+  --color-secondary: #d4af37;
+  /* Classic Gold */
+  --color-secondary-light: #fcd34d;
+  /* Amber 300 */
+  --color-secondary-dim: #b45309;
+  /* Amber 700 */
+
+  /* Backgrounds: Limpos e Sofisticados */
+  --color-bg: #f8fafc;
+  /* Slate 50 - Off-white frio */
+  --color-surface: #ffffff;
+  --color-surface-dim: #f1f5f9;
+  /* Slate 100 */
+
+  /* Texto: Alto Contraste para Leitura */
+  --color-text-main: #0f172a;
+  /* Slate 900 */
+  --color-text-body: #334155;
+  /* Slate 700 - Mais escuro que antes */
+  --color-text-muted: #64748b;
+  /* Slate 500 */
+  --color-text-on-primary: #ffffff;
+
+  /* Semantic */
+  --color-success: #10b981;
+  /* Emerald 500 */
+  --color-error: #ef4444;
+  /* Red 500 */
+  --color-warning: #f59e0b;
+  /* Amber 500 */
+
+  /* 📐 2. Tipografia Otimizada */
+  /* Importante: Adicionar import da fonte se não estiver no HTML Head */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  /* Inter é excelente para UI */
+
+  /* 🧿 3. Profundidade e Elevação (Shadows Soft) */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+  --glass-blur: blur(16px);
+
+  /* ⚡ 4. Animações */
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --duration-normal: 0.3s;
+
+  /* 📐 5. Layout */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+  --max-width: 1280px;
+  /* Mais largo para telas modernas */
+}
+
+/* Reset Moderno */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Tipografia */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-main);
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+h1 {
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  letter-spacing: -0.01em;
+}
+
+/* Utilitários de Animação (Micro-interactions) */
+.animate-fade-in {
+  animation: fadeIn 0.6s var(--ease-smooth) forwards;
+  opacity: 0;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s var(--ease-spring) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar Bonita */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
